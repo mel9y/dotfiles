@@ -17,4 +17,4 @@ m2en's dotfiles
 git clone git@github.com:m2en/dotfiles.git
 cd dotfiles
 make
-```ß
+```
