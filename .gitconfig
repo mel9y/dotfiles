@@ -1,0 +1,34 @@
+[user]
+	name = m2en
+	email = me@m2en.dev
+	signingKey = E87C3C8AB13248FC
+[push]
+	default = current
+[pull]
+	ff = only
+	rebase = false
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = false
+	ignorecase = false
+	editor = code --wait
+	quotepath = false
+[color]
+	ui = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	program = gpg
+[ghq]
+	root = ~/project
+[alias]
+	a = add
+	co = checkout
+	cob = checkout -b
+	cm = commit -m
+	s = status
+	l = log --oneline --graph --decorate
+	ls = log --show-signature
