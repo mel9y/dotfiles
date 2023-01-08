@@ -1,0 +1,29 @@
+# Git ステータス表示の設定
+[git_status]
+style = '#89a0fa'
+format = '$all_status$ahead_behind '
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '🙆‍♂️'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+[git_branch]
+style = '#89a0fa'
+truncation_symbol = ''
+format = 'on [$branch(:$remote_branch)]($style) '
+
+# ディレクトリ表示の設定
+[directory]
+style = '#5bebaf'
+
+# プロンプトのコマンド入力欄の設定
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
