@@ -53,7 +53,8 @@ bindkey '^g' anyframe-widget-cd-ghq-repository
 alias clone='ghq get'
 alias lg='lazygit'
 alias g='lazygit'
-alias vs='code ./'
+alias vsc='code'
+alias vsc-='code ./'
 
 # ------ END
 
