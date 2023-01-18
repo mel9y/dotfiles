@@ -32,3 +32,6 @@
 	s = status
 	l = log --oneline --graph --decorate
 	ls = log --show-signature
+	all = add .
+	b = branch
+	ba = branch -a
