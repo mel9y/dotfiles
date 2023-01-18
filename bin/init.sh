@@ -15,4 +15,9 @@ echo "init.sh: Homebrewのインストールを開始します"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "init.sh: Homebrewのインストールが終了しました"
 
+# Gitのインストール
+echo "init.sh: Gitのインストール(アップデート)を開始します"
+brew install git
+echo "init.sh: Gitのインストール(アップデート)が終了しました"
+
 echo "init.sh: すべてのスクリプトが終了しました"
