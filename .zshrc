@@ -60,7 +60,7 @@ alias vsc-='code ./'
 
 # zsh options ------
 
-HISTFILE=$ZDOTDIR/.zsh-history
+HISTFILE=~/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
 
