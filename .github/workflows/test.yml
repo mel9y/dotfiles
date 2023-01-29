@@ -18,4 +18,4 @@ jobs:
 
       - name: Set MacOS.
         run: |
-          make all && ls -la
+          make all && cd .. && ls -la
