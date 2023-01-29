@@ -1,0 +1,21 @@
+name: dotfiles test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: test m2en/dotfiles
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set MacOS.
+        run: |
+          make all && cd .. && ls -la
