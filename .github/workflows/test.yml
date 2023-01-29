@@ -17,4 +17,5 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set MacOS.
-        run: make all
+        run: |
+          make all && ls -la
