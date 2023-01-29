@@ -1,4 +1,4 @@
-all: init link
+all: init link brew
 
 # 初期化スクリプト
 init:
@@ -7,3 +7,6 @@ init:
 # シンボリックリンクスクリプト
 link:
 	bin/link.sh
+
+brew:
+	bin/brew.sh
