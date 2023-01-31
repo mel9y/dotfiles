@@ -15,7 +15,7 @@ brew:
 # Dockerのインストールスクリプト
 # all には登録しない (意図しない場面やCIで実行してしまうため)
 docker:
-	bin/brew/docker.sh
+	bin/docker.sh
 
 # 開発環境構築のスクリプト
 develop:
