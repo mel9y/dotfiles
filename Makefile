@@ -8,5 +8,10 @@ init:
 link:
 	bin/link.sh
 
+# homebrewによるインストールスクリプト
 brew:
 	bin/brew.sh
+
+# Dockerのインストールスクリプト
+docker:
+	bin/brew/docker.sh
