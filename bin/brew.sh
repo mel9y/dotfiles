@@ -6,5 +6,5 @@ if [ "$(uname)" != "Darwin" ] ; then
 fi
 
 echo ">> アプリケーション自動インストールを開始します"
-brew bundle --global --file './brew/.Brewfile'
-qecho ">> アプリケーション自動インストールを終了しました"
+brew bundle --global
+echo ">> アプリケーション自動インストールを終了しました"

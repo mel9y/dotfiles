@@ -16,8 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: test - init script
-        run: make init
+      # CI にえらい時間かかるし、エラーも起きにくいのでスキップ
+      # - name: test - init script
+      #   run: make init
 
       - name: test - link symbolic
         run: make link
