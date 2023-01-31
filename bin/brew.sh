@@ -6,8 +6,8 @@ if [ "$(uname)" != "Darwin" ] ; then
 fi
 
 echo "brew.sh: アプリケーション自動インストールを開始します"
-brew bundle --global --file '~/dotfiles/bin/brew/Brewfile'
-echo "brew.sh: アプリケーション自動インストールを終了しました"
+brew bundle --global --file './brew/.Brewfile'
+qecho "brew.sh: アプリケーション自動インストールを終了しました"
 
 echo "brew.sh: 以下のアプリケーションは手動でダウンロードしてください"
 echo "  - RunCat"
