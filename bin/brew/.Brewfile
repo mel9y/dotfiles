@@ -4,6 +4,15 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 
+# 言語のランタイムなどは bin/develop.sh でインストール
+
+brew "lazygit"
+brew "neofetch"
+brew "starship"
+brew "gpg"
+brew "peco"
+brew "ghq"
+
 cask "item2"
 cask "notion"
 cask "visual-studio-code"
