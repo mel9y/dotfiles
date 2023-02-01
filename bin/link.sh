@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# https://qiita.com/yutkat/items/c6c7584d9795799ee164
+
 link_to_homedir() {
-  command echo "backup old dotfiles..."
+  command echo "dotfiles のバックアップを作成します."
   if [ ! -d "$HOME/.dotbackup" ];then
-    command echo "$HOME/.dotbackup not found. Auto Make it"
+    command echo "$HOME/.dotbackup が見つかりません。作成します。"
     command mkdir "$HOME/.dotbackup"
   fi
 
@@ -25,6 +27,6 @@ link_to_homedir() {
   fi
 }
 
-echo "link.sh: シンボリックリンクの再リンクを開始します"
+echo ">> シンボリックリンクの再リンクを開始します"
 link_to_homedir
-echo "link.sh: シンボリックリンクの再リンクに成功しました"
+echo ">> シンボリックリンクの再リンクに成功しました"

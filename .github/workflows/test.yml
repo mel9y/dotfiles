@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - main
 
 jobs:
   test:
@@ -16,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set MacOS.
-        run: |
-          make all && cd .. && ls -la
+      - name: test - link symbolic
+        run: make link
+
+      - name: test - develop preparetion
+        run: make develop
