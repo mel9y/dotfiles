@@ -13,15 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # CI にえらい時間かかるし、エラーも起きにくいのでスキップ
-      # - name: test - init script
-      #   run: make init
-
       - name: test - link symbolic
         run: make link
-
-      - name: test - install brew application
-        run: make brew
 
       - name: test - develop preparetion
         run: make develop
