@@ -34,7 +34,7 @@ echo "Deno ------------------"
 brew install deno
 
 ## Deno のバージョン表示
-deno -v
+deno --version
 
 # Rust
 
