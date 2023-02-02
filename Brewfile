@@ -33,6 +33,7 @@ cask "postman"
 cask "raycast"
 cask "spotify"
 cask "visual-studio-code"
+cask "clipy"
 
 # Install AppStore App
 
