@@ -13,10 +13,10 @@ brew "git"
 brew "gnupg"
 brew "lazygit"
 brew "neofetch"
-brew "nvm"
 brew "peco"
 brew "pinentry-mac"
 brew "starship"
+
 
 # Install GUI App
 cask "cleanshot"
