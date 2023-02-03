@@ -8,7 +8,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 
 # Install CLI App
-brew "deno"
 brew "ghq"
 brew "git"
 brew "gnupg"
