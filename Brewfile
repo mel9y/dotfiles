@@ -34,6 +34,7 @@ cask "raycast"
 cask "spotify"
 cask "visual-studio-code"
 cask "clipy"
+cask "prismlauncher"
 
 # Install AppStore App
 
