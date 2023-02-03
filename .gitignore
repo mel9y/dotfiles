@@ -1,2 +1,4 @@
 .config/iterm2/
 Brewfile.lock.json
+.config/gh
+.config/jgit
