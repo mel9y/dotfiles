@@ -55,6 +55,30 @@ alias lg='lazygit'
 alias g='lazygit'
 alias vsc='code ./'
 
+### GitHub CLI
+alias gb='gh browse'
+
+#### Issue
+alias gia='gh issue create'
+alias gil='gh issue list'
+alias issue='gh issue list'
+alias gis='gh issue status'
+alias gic='gh issue close'
+alias gico='gh issue comment'
+alias gico='gh issue comment'
+
+#### Pull request
+alias gpa='gh pr create'
+alias gpl='gh pr list'
+alias pull='gh pr list'
+alias gps='gh pr status'
+alias gpch='gh pr checkout'
+alias gpci='gh pr checks'
+alias gpc='gh pr close'
+alias gpco='gh pr comment'
+alias gpready='gh pr ready'
+alias gpreview='gh pr review'
+
 # ------ END
 
 # zsh options ------
