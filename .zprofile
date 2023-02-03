@@ -8,9 +8,8 @@ export PATH="$PATH:/Users/m2en/Library/Application Support/JetBrains/Toolbox/scr
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Added JAVA_HOME
-export JAVA_HOME=`/usr/libexec/java_home -v 17`
-# export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-# export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+export JAVA_HOME=`/usr/libexec/java_home -v "8"`
+PATH=$JAVA_HOME/bin:$PATH
 
 # Added Deno path
 export DENO_INSTALL="/Users/m2en/.deno"
