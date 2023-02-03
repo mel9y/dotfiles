@@ -47,3 +47,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo --version
 rustup --version
 rustc --version
+
+# Scala
+
+echo "Scala ------------------"
+
+brew install scala
+brew install sbt
