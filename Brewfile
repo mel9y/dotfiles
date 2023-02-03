@@ -16,7 +16,7 @@ brew "neofetch"
 brew "peco"
 brew "pinentry-mac"
 brew "starship"
-
+brew "gh"
 
 # Install GUI App
 cask "cleanshot"
