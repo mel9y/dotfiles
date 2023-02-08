@@ -2,3 +2,4 @@
 Brewfile.lock.json
 .config/gh
 .config/jgit
+.config/lazygit/state.yml
