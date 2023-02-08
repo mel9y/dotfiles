@@ -1,0 +1,30 @@
+# GUI 関連の設定
+gui:
+  # アイコンを表示するかどうか (Nerd fontが必要)
+  showIcons: true
+  # ウィンドウサイズの指定
+  windowsSize: "full"
+  # ヒントを表示するかどうか
+  # うるせぇ俺はプロだいらねぇ
+  showRandomTip: false
+
+# Git 関連の設定
+git:
+  # 自動で Fetch するかどうか
+  # pinentry-mac が五月蝿くなるので間隔を伸ばしている
+  autoFetch: true
+  # 自動で Refresh するかどうか (コミット対象ファイルリスト)
+  autoRefresh: true
+  # lazygit が表示する git log のコマンド
+  # デフォルトに `--show-signature` つけてGPG鍵の署名状況わかるようにしてるだけ
+  branchLogCmd: "git log --show-signature --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --"
+  allBranchesLogCmd: "git log --show-signature --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium"
+
+# Fetch & Refresh のインターバル設定
+refresher:
+  # autoRefresh の間隔
+  # "r" 押すの面倒臭いので 5min
+  refreshInterval: 5
+  # autoFetch の間隔
+  # pinentry-mac が五月蝿くなるので間隔を伸ばしている
+  fetchInterval: 360
