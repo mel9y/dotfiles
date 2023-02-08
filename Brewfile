@@ -17,6 +17,8 @@ brew "peco"
 brew "pinentry-mac"
 brew "starship"
 brew "gh"
+brew "yt-dlp"
+brew "ffmpeg"
 
 # Install GUI App
 cask "cleanshot"
