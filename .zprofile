@@ -14,3 +14,6 @@ PATH=$JAVA_HOME/bin:$PATH
 # Added Deno path
 export DENO_INSTALL="/Users/m2en/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Changed config path
+export XDG_CONFIG_HOME="$HOME/.config"
