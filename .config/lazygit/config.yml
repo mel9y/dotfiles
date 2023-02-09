@@ -11,8 +11,7 @@ gui:
 # Git 関連の設定
 git:
   # 自動で Fetch するかどうか
-  # pinentry-mac が五月蝿くなるので間隔を伸ばしている
-  autoFetch: true
+  autoFetch: false
   # 自動で Refresh するかどうか (コミット対象ファイルリスト)
   autoRefresh: true
   # lazygit が表示する git log のコマンド
@@ -27,4 +26,4 @@ refresher:
   refreshInterval: 5
   # autoFetch の間隔
   # pinentry-mac が五月蝿くなるので間隔を伸ばしている
-  fetchInterval: 360
+  # fetchInterval: 360
