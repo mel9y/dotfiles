@@ -20,18 +20,12 @@ bin/
     brew.sh --- homebrewを使ってアプリケーションをセットアップするスクリプト
     develop.sh --- 開発環境を構築するスクリプト
     docker.sh --- Docker の構築を行うスクリプト
-    init.sh --- Xcode Command Line Tools , homebrew, git をセットアップするスクリプト
     link.sh --- シンボリックリンクの再リンクスクリプト
 ```
-
-> **Note**
->
-> `init.sh` によるセットアップスクリプトは廃止予定です。
 
 ## セットアップ
 
 1. Xcode Command Line Tools, git のセットアップを行う
-   - git が利用できない関係で dotfiles を入手する手段は GitHub から zip ファイルを入手するしかないため、 `make init` は使用せず、コマンドラインから直接セットアップします。
 
 ```shell
 xcode-select --install
@@ -39,15 +33,15 @@ xcode-select --install
 brew install git
 ```
 
-2. アプリケーションをインストールする
+1. アプリケーションをインストールする
     - `make brew` を実行し、アプリケーションをインストールします。
     - `make docker` を実行し、 Docker, Docker Desktop をインストールします。
 
-3. シンボリックリンクの再リンク
+2. シンボリックリンクの再リンク
     - `make link` を実行し、シンボリックリンクを再リンクします。
 
-4. 開発環境の再構築
-    - `make develop` を実行し、開発環境を再構築します。s
+3. 開発環境の再構築
+    - `make develop` を実行し、開発環境を再構築します。
 
 
 ## メンテナンス
