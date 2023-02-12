@@ -14,10 +14,6 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-## theme
-# zinit ice pick"async.zsh" src"pure.zsh"
-# zinit light sindresorhus/pure
-
 ## plugin
 ### zsh-syntax-highlighting
 zinit light zsh-users/zsh-syntax-highlighting
