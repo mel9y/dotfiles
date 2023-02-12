@@ -19,6 +19,7 @@ brew "starship"
 brew "gh"
 brew "yt-dlp"
 brew "ffmpeg"
+brew "tmux"
 
 # Install GUI App
 cask "cleanshot"
