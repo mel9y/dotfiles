@@ -3,3 +3,4 @@ Brewfile.lock.json
 .config/gh
 .config/jgit
 .config/lazygit/state.yml
+.config/configstore/update-notifier-@vuepress
