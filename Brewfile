@@ -22,6 +22,7 @@ brew "ffmpeg"
 brew "tmux"
 brew "gawk"
 brew "coreutils"
+brew "bat"
 
 # Install GUI App
 cask "cleanshot"
