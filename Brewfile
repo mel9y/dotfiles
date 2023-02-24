@@ -23,6 +23,7 @@ brew "tmux"
 brew "gawk"
 brew "coreutils"
 brew "bat"
+brew "onefetch"
 
 # Install GUI App
 cask "cleanshot"
