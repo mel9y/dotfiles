@@ -24,6 +24,7 @@ brew "gawk"
 brew "coreutils"
 brew "bat"
 brew "onefetch"
+brew "trivy"
 
 # Install GUI App
 cask "cleanshot"
