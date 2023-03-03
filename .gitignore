@@ -5,3 +5,4 @@ Brewfile.lock.json
 .config/lazygit/state.yml
 .config/configstore/update-notifier-@vuepress
 .config/github-copilot
+.config/yarn/global
