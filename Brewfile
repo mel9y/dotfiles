@@ -43,6 +43,8 @@ cask "visual-studio-code"
 cask "clipy"
 cask "prismlauncher"
 cask "slack"
+# FIXME: alacritty が macOS のウィルススキャンに引っかかって brew bundle ではインストールに失敗してしまう
+# See also: https://github.com/alacritty/alacritty/issues/4673
 cask "alacritty"
 
 # Install AppStore App
