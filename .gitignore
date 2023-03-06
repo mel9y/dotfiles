@@ -1,8 +1,43 @@
-.config/iterm2/
-Brewfile.lock.json
-.config/gh
-.config/jgit
-.config/lazygit/state.yml
-.config/configstore/update-notifier-@vuepress
-.config/github-copilot
-.config/yarn/global
+# dotfiles で管理している状態でいると様々なアプリケーションが構成ファイル等を .config/ 配下に生成していく
+# それらを ignore していくのは骨が折れるので gitignore をホワイトリスト形式で運用する
+# See also: https://qiita.com/yutkat/items/c6c7584d9795799ee164
+
+## blacklist ----
+
+/*
+/.**
+
+## whitelist ----
+### gitignore は上から解釈されることに注意
+### 各パスの最初に ! をつけることで否定の意味、つまり ignore されずにステージングできる
+
+# 上位パス (./dotfiles)
+
+!/README.md
+!/Makefile
+!/Brewfile
+
+!/.zshrc
+!/.zshenv
+!/.zprofile
+!/.tmux.conf
+!/.gitignore
+!/.gitconfig
+
+# バイナリディレクトリ (./dotfiles/bin)
+
+!/bin/brew.sh
+!/bin/develop.sh
+!/bin/link.sh
+
+# GitHubディレクトリ (./dotfiles/.github)
+## .git は特に必要ない (コミットしないので)
+
+!/.github/workflows/test.yml
+
+# .configディレクトリ (./dotfiles/.config)
+
+!/.config/alacritty/alacritty.yml
+!/.config/lazygit/config.yml
+!/.config/neofetch/config.conf
+!/.config/starship.toml
