@@ -1,0 +1,74 @@
+# テーマ
+colors:
+## tokyo-night-alacritty-theme: https://github.com/zatchheems/tokyo-night-alacritty-theme
+  ### Default colors
+  primary:
+    background: '#1a1b26'
+    foreground: '#a9b1d6'
+
+  ### Normal colors
+  normal:
+    black:   '#32344a'
+    red:     '#f7768e'
+    green:   '#9ece6a'
+    yellow:  '#e0af68'
+    blue:    '#7aa2f7'
+    magenta: '#ad8ee6'
+    cyan:    '#449dab'
+    white:   '#787c99'
+
+  ### Bright colors
+  bright:
+    black:   '#444b6a'
+    red:     '#ff7a93'
+    green:   '#b9f27c'
+    yellow:  '#ff9e64'
+    blue:    '#7da6ff'
+    magenta: '#bb9af7'
+    cyan:    '#0db9d7'
+    white:   '#acb0d0'
+
+# フォント
+font:
+  size: 14
+  normal:
+    family: 'JetBrainsMonoNL Nerd Font Mono'
+
+# シェルの設定
+shell:
+  ## 起動時に tmux を起動する
+  program: /bin/zsh
+  ## セッションが存在していればそのセッションに attach し、セッションが存在しない場合は新規セッションを作成する
+  args:
+    - -l
+    - -c
+    - "tmux a -t 0 || tmux"
+
+# ウィンドウ設定
+window:
+  ## 起動時のウィンドウサイズを設定
+  ## M2 MacBook Air (2,560 x 1,664) で Zoom 表示した際のサイズに合わせている (2023/03/07〜)
+  dimensions:
+    columns: 184
+    lines: 46
+  ## 起動時のウィンドウデコレーションを設定
+  ## macOS では何も表示しないオプション等が用意されていたが今後 macOS 以外でも使う可能性を考慮して設定していない
+  ## See also: https://github.com/alacritty/alacritty/blob/master/alacritty.yml#L56-L65
+  decorations: full
+
+# セレクション設定
+selection:
+  ## Alacitty 上で指定した文字を自動的にクリップボードにコピーする
+  ## tmux が pbcopy を叩きにいくのもありだけど、 pbcopy があるのは macOS だけなのでこれはあまり好まれない気がするので Alacitty にやらせたい
+  save_to_clipboard: true
+
+# カーソル設定
+cursor:
+  ## カーソルのスタイル設定
+  style:
+    shape: Underline
+    ### カーソルの点滅を無効化
+    blinking: Off
+
+env:
+  TERM: alacritty
