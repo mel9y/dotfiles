@@ -42,7 +42,6 @@ cask "spotify"
 cask "visual-studio-code"
 cask "clipy"
 cask "prismlauncher"
-cask "cloudflare-warp"
 cask "slack"
 
 # Install AppStore App
