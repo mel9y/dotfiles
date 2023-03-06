@@ -19,7 +19,6 @@ m2en/dotfiles は以下の構成で作成されています。
 bin/
     brew.sh --- homebrewを使ってアプリケーションをセットアップするスクリプト
     develop.sh --- 開発環境を構築するスクリプト
-    docker.sh --- Docker の構築を行うスクリプト
     link.sh --- シンボリックリンクの再リンクスクリプト
 ```
 
