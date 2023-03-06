@@ -1,48 +1,53 @@
-# dotfiles
+# mel9y's dotfiles
 
-m2en's dotfiles
+![dotfiles](https://user-images.githubusercontent.com/82575685/223217356-9afdc7ad-1ad5-49b5-8e63-3104a5404f74.jpg)
 
-インストールスクリプトの関係上、**ghqなどは使用せず**ホームディレクトリにクローンすることをおすすめします。
+## インストール
 
-```
-cd
-git clone git@github.com:m2en/dotfiles.git
-cd dotfiles
-...
-```
+> **Waining**
+>
+> この dotfiles は macOS を想定して作成、メンテナンスしています。Alacritty 移行後、Windows や 他の Linux ディストリビューション でも動作するようにはなっているはずですが、保証はできません。(homebrewに関してはmacOSのみのため、一切動作しません。)
 
-## 構成
+### 推奨環境
 
-m2en/dotfiles は以下の構成で作成されています。
+- OS: macOS Ventura
+- シェル: zsh
+- ターミナル: Alacritty
+  - 2023/03/07以降 `iTerm` は使用していないため、非推奨です。
 
-```
-bin/
-    brew.sh --- homebrewを使ってアプリケーションをセットアップするスクリプト
-    develop.sh --- 開発環境を構築するスクリプト
-    link.sh --- シンボリックリンクの再リンクスクリプト
-```
+----
 
-## セットアップ
+> **Warning**
+> インストーラーは2023/03/07現在利用できません。
 
-1. Xcode Command Line Tools, git のセットアップを行う
+1. `mel9y/dotfiles` をクローンします。
 
 ```shell
-xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git
+git clone https://github.com/mel9y/dotfiles.git
 ```
 
-1. アプリケーションをインストールする
-    - `make brew` を実行し、アプリケーションをインストールします。
-    - `make docker` を実行し、 Docker, Docker Desktop をインストールします。
+2. インストーラーを実行します。
 
-2. シンボリックリンクの再リンク
-    - `make link` を実行し、シンボリックリンクを再リンクします。
+```shell
+cd dotfiles
+./installer.sh
+```
 
-3. 開発環境の再構築
-    - `make develop` を実行し、開発環境を再構築します。
+## カスタマイズ
 
+### homebrew
 
-## メンテナンス
+`Brewfile` では macOS で使用するアプリケーション(GUI, CLI) を一元管理できます。
 
-`docs/` 配下にある [m2en/dotfiles maintenance documentation](./docs/README.md) を参照してください。
+```brewfile
+# 使用する tap を定義する
+tap "heroku/brew"
+# インストールする CLI アプリケーションを定義する
+brew "neofetch"
+# インストールする GUI アプリケーション (cask) を定義する
+cask "discord"
+# インストールする AppStore のアプリケーションを定義する
+brew "mas"
+mas "TickTick:To-Do List, Calendar", id: 966085870
+```
+
