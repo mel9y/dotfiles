@@ -43,6 +43,7 @@ cask "visual-studio-code"
 cask "clipy"
 cask "prismlauncher"
 cask "slack"
+cask "alacritty"
 
 # Install AppStore App
 
