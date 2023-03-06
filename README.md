@@ -4,7 +4,7 @@
 
 ## インストール
 
-> **Waining**
+> **Warning**
 >
 > この dotfiles は macOS を想定して作成、メンテナンスしています。Alacritty 移行後、Windows や 他の Linux ディストリビューション でも動作するようにはなっているはずですが、保証はできません。(homebrewに関してはmacOSのみのため、一切動作しません。)
 
