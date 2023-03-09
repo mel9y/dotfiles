@@ -76,6 +76,10 @@ alias gpco='gh pr comment'
 alias gpready='gh pr ready'
 alias gpreview='gh pr review'
 
+#### cargo-compete
+alias atest='cargo compete test'
+alias asubmit='cargo compete submit'
+
 # ------ END
 
 # zsh options ------
