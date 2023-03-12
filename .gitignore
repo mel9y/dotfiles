@@ -26,10 +26,7 @@
 
 # バイナリディレクトリ (./dotfiles/bin)
 
-!/bin/brew.sh
-!/bin/develop.sh
 !/bin/link.sh
-!/bin/installer.sh
 
 # GitHubディレクトリ (./dotfiles/.github)
 ## .git は特に必要ない (コミットしないので)
