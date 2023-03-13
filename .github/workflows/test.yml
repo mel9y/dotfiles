@@ -4,17 +4,16 @@ on:
   pull_request:
     branches:
       - main
+    path:
+      - 'installer.sh'
 
 jobs:
   test:
-    name: test m2en/dotfiles
+    name: test mel9y/dotfiles
     runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: test - link symbolic
-        run: make link
-
-      - name: test - develop preparetion
-        run: make develop
+      - name: installer
+        run: ./installer.sh
