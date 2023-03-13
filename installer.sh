@@ -96,57 +96,68 @@ log ${UNDERLINE} "3/3 - 開発環境の構築"
 echo ""
 info "開発環境の構築を行います"
 echo ""
-info "1/3: Node.js (nvm)"
-echo ""
 
-if command -v node &>/dev/null; then
-    warn "すでに Node.js はインストールされています。"
+setup_development() {
+
+    info "1/3: Node.js (nvm)"
+    echo ""
+
+    if command -v node &>/dev/null; then
+        warn "すでに Node.js はインストールされています。"
+    else
+        info "1/3 - Node.js: nvm のインストールを行います。"
+        brew install nvm
+
+        echo ""
+        info "1/3 - Node.js: 最新LTS の Node.js をインストールします。"
+        nvm install "lts/*" --reinstall-packages-from=current
+
+        echo ""
+        warn "1/3 - Node.js: yarn , pnpm 等のパッケージマネージャーは Corepack を介して利用してください。"
+
+        echo "1/3 - Node.js: Node.js のインストールに成功しました。"
+        node -v
+        npm -v
+    fi
+
+    echo ""
+    info "2/3: Rust"
+    echo ""
+
+    if command -v rustc &>/dev/null; then
+        warn "すでに Rust はインストールされています。"
+    else
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+        echo ""
+        echo "2/3 - Rust: Rust のインストールに成功しました。"
+        cargo --version
+        rustup --version
+        rustc --version
+    fi
+
+
+    echo ""
+    info "3/3: deno"
+    echo ""
+
+    if command -v deno &>/dev/null; then
+        warn "すでに Deno はインストールされています。"
+    else
+        brew install deno
+
+        echo ""
+        echo "3/3 - Deno: Deno のインストールに成功しました。"
+        deno --version
+    fi
+}
+
+if [ "$(uname)" == "Darwin" ] ; then
+    setup_development
 else
-    info "1/3 - Node.js: nvm のインストールを行います。"
-    brew install nvm
-
-    echo ""
-    info "1/3 - Node.js: 最新LTS の Node.js をインストールします。"
-    nvm install "lts/*" --reinstall-packages-from=current
-
-    echo ""
-    warn "1/3 - Node.js: yarn , pnpm 等のパッケージマネージャーは Corepack を介して利用してください。"
-
-    echo "1/3 - Node.js: Node.js のインストールに成功しました。"
-    node -v
-    npm -v
+    warn "この手順は macOS でのみ有効です。スキップします。"
 fi
 
-echo ""
-info "2/3: Rust"
-echo ""
-
-if command -v rustc &>/dev/null; then
-    warn "すでに Rust はインストールされています。"
-else
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-    echo ""
-    echo "2/3 - Rust: Rust のインストールに成功しました。"
-    cargo --version
-    rustup --version
-    rustc --version
-fi
-
-
-echo ""
-info "3/3: deno"
-echo ""
-
-if command -v deno &>/dev/null; then
-    warn "すでに Deno はインストールされています。"
-else
-    brew install deno
-
-    echo ""
-    echo "3/3 - Deno: Deno のインストールに成功しました。"
-    deno --version
-fi
 
 echo ""
 info "開発環境の構築が完了しました"
