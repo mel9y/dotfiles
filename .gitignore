@@ -23,10 +23,8 @@
 !/.tmux.conf
 !/.gitignore
 !/.gitconfig
-
-# バイナリディレクトリ (./dotfiles/bin)
-
-!/bin/link.sh
+!/install.sh
+!/installer.sh
 
 # GitHubディレクトリ (./dotfiles/.github)
 ## .git は特に必要ない (コミットしないので)
