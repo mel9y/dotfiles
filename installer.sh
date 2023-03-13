@@ -79,7 +79,7 @@ echo ""
 
 # アプリケーションのインストール --------------
 log ${UNDERLINE} "2/3 - アプリケーションのインストール"
-if [ -n "$GITHUB_ACTIONS"] then
+if [ -n "$GITHUB_ACTIONS" ] ; then
     warn "GitHub Actions 内での実行を検知しました。CIの時間を短縮するため、この処理はスキップされます"
 else
     if [ "$(uname)" == "Darwin" ] ; then
@@ -90,6 +90,8 @@ else
 
         echo ""
         info "アプリケーションのインストールに成功しました。"
+    else
+        warn "この手順は macOS でのみ有効です。スキップします。"
     fi
 fi
 
