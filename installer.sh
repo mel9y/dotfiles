@@ -42,30 +42,37 @@ if [ "$(uname)" != "Darwin" ] ; then
 fi
 
 # シンボリックリンクのリンク --------------
+
+link_to_homedir() {
+  if [ ! -d "$HOME/.dotbackup" ];then
+    warn "$HOME/.dotbackup が見つかりません。作成します。"
+    command mkdir "$HOME/.dotbackup"
+  fi
+
+  local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+  local dotdir=$(dirname ${script_dir})
+  if [[ "$HOME" != "$dotdir" ]];then
+    for f in $dotdir/.??*; do
+      [[ `basename $f` == ".git" ]] && continue
+      if [[ -L "$HOME/`basename $f`" ]];then
+        command rm -f "$HOME/`basename $f`"
+      fi
+      if [[ -e "$HOME/`basename $f`" ]];then
+        command mv "$HOME/`basename $f`" "$HOME/.dotbackup"
+      fi
+      command ln -snf $f $HOME
+    done
+  else
+    echo "same install src dest"
+  fi
+}
+
 log ${UNDERLINE} "1/3 - シンボリックリンクのリンク"
 echo ""
 info "シンボリックリンクのリンクを開始します。"
 
-if [ ! -d "$HOME/.dotbackup" ];then
-    warn "$HOME/.dotbackup が見つかりません。作成します。"
-    mkdir "$HOME/.dotbackup"
-fi
-local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-local dotdir=$(dirname ${script_dir})
-if [[ "$HOME" != "$dotdir" ]];then
-    for f in $dotdir/.??*; do
-        [[ `basename $f` == ".git" ]] && continue
-        if [[ -L "$HOME/`basename $f`" ]];then
-            rm -f "$HOME/`basename $f`"
-        fi
-        if [[ -e "$HOME/`basename $f`" ]];then
-            mv "$HOME/`basename $f`" "$HOME/.dotbackup"
-        fi
-        ln -snf $f $HOME
-    done
-else
-    # 何もしない
-fi
+link_to_homedir
+
 echo ""
 info "シンボリックリンクのリンクが完了しました。"
 echo ""
