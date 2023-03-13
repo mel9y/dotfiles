@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    name: test mel9y/dotfiles
+    name: test installer (macOS)
     runs-on: macos-latest
 
     steps:
@@ -17,3 +17,15 @@ jobs:
 
       - name: installer
         run: ./installer.sh
+  test-other-os:
+    # 本来 macOS でしか行えないインストール手順をスキップできるかの確認 (事前に macOS でのテストが成功している必要がある)
+    name: test installer (ubuntu)
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: installer
+        run: ./installer.sh
+
