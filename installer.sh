@@ -168,4 +168,3 @@ info "開発環境の構築が完了しました"
 echo ""
 
 info "すべてのインストール作業が完了しました！"
-figlet -f larry3d Fin
