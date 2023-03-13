@@ -25,6 +25,7 @@ brew "coreutils"
 brew "bat"
 brew "onefetch"
 brew "trivy"
+brew "figlet"
 
 # Install GUI App
 cask "cleanshot"
