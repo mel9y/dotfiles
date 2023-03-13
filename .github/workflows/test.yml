@@ -4,17 +4,28 @@ on:
   pull_request:
     branches:
       - main
+    path:
+      - 'installer.sh'
 
 jobs:
   test:
-    name: test m2en/dotfiles
+    name: test installer (macOS)
     runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: test - link symbolic
-        run: make link
+      - name: installer
+        run: ./installer.sh
+  test-other-os:
+    # 本来 macOS でしか行えないインストール手順をスキップできるかの確認 (事前に macOS でのテストが成功している必要がある)
+    name: test installer (ubuntu)
+    needs: test
+    runs-on: ubuntu-latest
 
-      - name: test - develop preparetion
-        run: make develop
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: installer
+        run: ./installer.sh
+
