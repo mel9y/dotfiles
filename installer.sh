@@ -32,14 +32,6 @@ log() {
     printf "$1%s${ESC}[m\n" "$2"
 }
 
-# TODO: うるさくてコメントアウトしたこれを解除する
-# アスキーアートを作りたいだけ
-# brew install figlet
-
-# figlet -f larry3d mel9y
-# figlet -f larry3d dotfiles
-# figlet -f larry3d installer
-log ${UNDERLINE} "figlet のインストールはこれがやりたかっただけです。その他のアプリケーションはあとからインストールされます。"
 echo ""
 info "mel9y installerへようこそ!"
 info "GitHub: https://github.com/mel9y/dotfiles"
