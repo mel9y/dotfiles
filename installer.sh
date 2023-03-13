@@ -79,16 +79,18 @@ echo ""
 
 # アプリケーションのインストール --------------
 log ${UNDERLINE} "2/3 - アプリケーションのインストール"
-if [ "$(uname)" == "Darwin" ] ; then
-    echo ""
-    info "アプリケーションのインストールを開始します。アプリケーションのインストールは homebrew によって行われます。"
-
-    brew bundle
-
-    echo ""
-    info "アプリケーションのインストールに成功しました。"
+if [ -n "$GITHUB_ACTIONS"] then
+    warn "GitHub Actions 内での実行を検知しました。CIの時間を短縮するため、この処理はスキップされます"
 else
-    warn "この手順は macOS でのみ有効です。スキップします。"
+    if [ "$(uname)" == "Darwin" ] ; then
+        echo ""
+        info "アプリケーションのインストールを開始します。アプリケーションのインストールは homebrew によって行われます。"
+
+        brew bundle
+
+        echo ""
+        info "アプリケーションのインストールに成功しました。"
+    fi
 fi
 
 # 開発環境の構築 ---------------
